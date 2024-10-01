@@ -1,5 +1,6 @@
 # CyclingStatsDisplay
-![Demo](CyclingStatsDisplay/stravaApp.gif)
+
+<img src="CyclingStatsDisplay/stravaApp.gif" alt="Demo of the feature" width="500" height="300"/>
 # Build Instructions
 
 1. First clone the repository with git clone git@github.com:jtabraham123/CyclingStatsDisplay.git (if you have git ssh setup) or https://github.com/jtabraham123/CyclingStatsDisplay.git for git https
