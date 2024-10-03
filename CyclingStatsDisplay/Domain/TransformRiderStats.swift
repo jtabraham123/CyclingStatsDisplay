@@ -41,7 +41,7 @@ extension RiderData {
         transformed.append(RiderDataWithTitle(title: "Ride Count", value: String(count)))
         let milesTraveled = distance/1609.34
         transformed.append(RiderDataWithTitle(title:"Distance Rode", value: String(format: "%.2f", milesTraveled) + " miles"))
-        let minutesRiding = moving_time/60
+        let minutesRiding = Float(moving_time)/60.0
         transformed.append(RiderDataWithTitle(title:"Time Spent Riding", value: String(format: "%.2f", minutesRiding) + " minutes"))
         let feetGain = elevation_gain*3.28084
         transformed.append(RiderDataWithTitle(title: "Elevation Gain", value: String(format: "%.2f", feetGain) + " feet"))
