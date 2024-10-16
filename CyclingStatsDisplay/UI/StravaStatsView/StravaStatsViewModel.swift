@@ -22,18 +22,24 @@ class StravaStatsViewModel: ViewModelType {
     }
     
     func getRiderStats(retry: Bool) {
+        let dispatchGroup = DispatchGroup()
+        
         if (retry) {
+            dispatchGroup.enter()
             DispatchQueue.main.async {
                 self.riderStats = nil
+                dispatchGroup.leave()
             }
         }
         stravaAPIService.getRiderData { [weak self] result in
             DispatchQueue.main.async {
-                if case .success(let stats) = result {
-                    self?.riderStats = .success(stats.toRiderStatsDomainObject())
-                }
-                else if case .failure(let error) = result{
-                    self?.riderStats = .failure(error)
+                dispatchGroup.notify(queue: DispatchQueue.main) {
+                    if case .success(let stats) = result {
+                        self?.riderStats = .success(stats.toRiderStatsDomainObject())
+                    }
+                    else if case .failure(let error) = result{
+                        self?.riderStats = .failure(error)
+                    }
                 }
             }
         }
