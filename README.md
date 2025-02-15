@@ -4,7 +4,7 @@
 
 # Build Instructions
 
-1. First clone the repository with git clone git@github.com:jtabraham123/CyclingStatsDisplay.git (if you have git ssh setup) or https://github.com/jtabraham123/CyclingStatsDisplay.git for git https
+1. First clone the repository with `git clone git@github.com:jtabraham123/CyclingStatsDisplay.git` (if you have git ssh setup) or `git clone https://github.com/jtabraham123/CyclingStatsDisplay.git` for git https
 
 2. Then open Xcode, click open existing project and open the project in the directory where you cloned it
 
